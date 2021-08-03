@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create Kid</title>
+</head>
+<body>
+
+<h1>Create Kid</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+
+<form method="post" action="/kids/create">
+    <input type="text" name="kidName">
+    <input type="submit" name="Add Kid">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+<h1>All Kids</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+
+<p th:unless="${kids} and ${kids.size()}">No Kids Have Been Added...</p>
+
+<ul>
+    <th:block th:each="kid : ${kids}">
+        <li th:text="${kid}"></li>
+    </th:block>
+</ul>
+
+</body>
+</html>
