@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title></title>
-</head>
-<body>
+<head th:replace="fragments :: head"></head>
 
-<h1>All Kids</h1>
+<body class="container">
 
 <nav th:replace="fragments :: navigation"></nav>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>All Kids</th>
+        </tr>
+    </thead>
+    <tr th:each="kid : ${kids}">
+        <td th:text="${kid}"></td>
+    </tr>
+</table>
 
 <p th:unless="${kids} and ${kids.size()}">No Kids Have Been Added...</p>
 
-<ul>
-    <th:block th:each="kid : ${kids}">
-        <li th:text="${kid}"></li>
-    </th:block>
-</ul>
+
+
+
 
 </body>
 </html>

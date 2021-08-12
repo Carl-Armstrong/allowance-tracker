@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Allowance Tracker</title>
-</head>
-<body>
+<head th:replace="fragments :: head"></head>
+<body class="container">
     <h1>Allowance Tracker</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
+
+<p>Welcome [username]. Here are the balances:</p>
+<p>[Kid A: 50 gems: $5.00 or 500 minutes of game time]</p>
+<p>[etc]</p>
+<p>Click on a kid to see their history</p>
+<p>[Add gems]</p>
+<p>Recent Activity: (click on one to repeat it)</p>
+<p>[Kid A earned 10 gems: doing chores]</p>
+<p>[etc]</p>
+<p>[Add kid]</p>
+<p>[Change incentive type/value]</p>
+<p>[See all history]</p>
 
 </body>
 </html>
